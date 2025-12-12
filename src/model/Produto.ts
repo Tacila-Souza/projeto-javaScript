@@ -2,7 +2,6 @@ import { colors } from "../util/colors";
 
 export abstract class Produto {
 
-    // Atributos gerais para todos os produtos
     private _id: number;
     private _tipo: number;
     private _nome: string;
@@ -17,7 +16,6 @@ export abstract class Produto {
         this._quantidade = quantidade;
     }
 
-    // Getters e Setters
     public get id(): number {
         return this._id;
     }
@@ -58,7 +56,7 @@ export abstract class Produto {
         this._quantidade = value;
     }
 
-    // Método Visualizar (Polimorfismo)
+
     public visualizar(): void {
         let tipoString: string = "";
 
@@ -67,7 +65,7 @@ export abstract class Produto {
                 tipoString = "Eletrônico";
                 break;
             case 2:
-                tipoString = "Outro"; // Adicione mais casos conforme seu Menu
+                tipoString = "Outro"; 
                 break;
         }
 
